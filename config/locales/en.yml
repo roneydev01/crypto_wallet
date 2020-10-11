@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello'
+  links:
+    new: 'New'
+    edit: 'Edit'
+    show: 'Show'
+    delete: 'Delete'
+  msg:
+    confirm: 'Are you sure?'

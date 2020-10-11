@@ -1,0 +1,9 @@
+pt-BR:
+  hello: "Olá"
+  links:
+    new: 'Nova'
+    edit: 'Editar'
+    show: 'Mostrar'
+    delete: 'Deletar'
+  msg:
+    confirm: 'Tem certeza?'
