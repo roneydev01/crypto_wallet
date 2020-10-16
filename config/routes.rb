@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  resources :mining_types
   resources :coins
   #get '/moedas', to: 'coins#index'
 
