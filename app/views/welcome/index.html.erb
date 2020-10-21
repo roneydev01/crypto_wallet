@@ -1,13 +1,8 @@
 <h1>Bem Vindo</h1>
 <p><%= @meu_nome %></p>
-<ul>
-  <li>
-    <%= link_to "Cadsatrar Moedas", coins_path %>
-  </li>
-  <li>
-    <%= link_to "Cadsatrar Tipos de Moedas", mining_types_path %>
-  </li>
-</ul>
+
+<%= render "menu" %>
+
 <p><strong>Data a partir do i18n: </strong><%= l(Date.today) %></p>
 <p> Você está no ambiente de <strong><%= ambiente %></strong></p>
 <p> O idioma usada nessa aplicação é:<strong><%= idioma %></strong></p>
