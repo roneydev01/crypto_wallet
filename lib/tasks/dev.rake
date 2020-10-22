@@ -5,8 +5,8 @@ namespace :dev do
       show_spnner("Apagando BD..."){ %x(rails db:drop)}
       show_spnner("Criando BD..."){ %x(rails db:create)}
       show_spnner("Migrando BD..."){ %x(rails db:migrate)}
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else
       puts "Ação não realizada. Verifique se você esta no ambiente de desenvolvimeto."
     end
@@ -20,14 +20,16 @@ namespace :dev do
           {
             description: "Bitcoin",
             acronym: "BTC",
-            url_image:"https://upload.wikimedia.org/wikipedia/commons/c/cf/Bitcoin.com_logo.png"
+            url_image:"https://upload.wikimedia.org/wikipedia/commons/c/cf/Bitcoin.com_logo.png",
+            mining_type: MiningType.find_by(acronym: 'PoW')
             
           },
 
           {
             description: "Ethereum",
             acronym: "ETH",
-            url_image:"https://img2.gratispng.com/20180516/vgq/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9e70b61.4199610615265041219464.jpg"
+            url_image:"https://img2.gratispng.com/20180516/vgq/kisspng-ethereum-cryptocurrency-blockchain-logo-eos-io-crypto-5afc9ab9e70b61.4199610615265041219464.jpg",
+            mining_type: MiningType.all.sample
           }
         ]
       )
