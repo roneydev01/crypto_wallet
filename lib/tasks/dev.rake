@@ -5,7 +5,8 @@ namespace :dev do
       show_spnner("Apagando BD..."){ %x(rails db:drop)}
       show_spnner("Criando BD..."){ %x(rails db:create)}
       show_spnner("Migrando BD..."){ %x(rails db:migrate)}
-      %x(rails dev:add_coins)    
+      %x(rails dev:add_coins)
+      %x(rails dev:add_mining_types)
     else
       puts "Ação não realizada. Verifique se você esta no ambiente de desenvolvimeto."
     end
@@ -38,7 +39,25 @@ namespace :dev do
       end
     end
   end
-  
+
+  desc "Cadastra Tipos de Mineração"
+  task add_mining_types: :environment do
+    show_spnner("Cadastradando Tipos de Moneração...") do
+      mining_types =
+       [
+          {description: "Proof of Work", acronym: "PoW"},
+          {description: "Proof of Stake", acronym: "PoS"},
+          {description: "Proof of Capacity", acronym: "PoC"}
+        ]
+
+      mining_types.each do |mining_type|
+        sleep(1)
+        #Se já existir não cria novamente
+        MiningType.find_or_create_by!(mining_type)
+      end
+    end
+  end
+
   private
 
   def show_spnner(msg_start, msg_end = "Concluído")
