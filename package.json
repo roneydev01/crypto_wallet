@@ -6,10 +6,16 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
+    "jquery": "^3.5.1",
+    "notify-js-legacy": "^0.4.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:roneydev01/crypto_wallet.git",
+  "author": "roneydev01 <roneyfreitas.rf@gmail.com>",
+  "license": "MIT"
 }
