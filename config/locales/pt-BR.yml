@@ -1,5 +1,7 @@
 pt-BR:
-  hello: "Olá"
+  actual_locale: "Português do Brasil"
+  welcome: 'Bem-Vindo'
+  hello: 'Olá'
   links:
     new: 'Nova'
     edit: 'Editar'

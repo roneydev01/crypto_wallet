@@ -30,6 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  actual_locale: "English"
+  welcome: 'Welcome'
   hello: 'Hello'
   links:
     new: 'New'
