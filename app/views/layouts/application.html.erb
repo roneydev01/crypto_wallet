@@ -10,8 +10,18 @@
   </head>
 
   <body>
-    <h2>Cabeçalho</h2>
-    <%= yield %> <%# index.html.erb, edit.html.erb ...%>
-    <h2>Rodapé</h2>
+    <div class="container-fluid">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <%= link_to 'Português', root_path(locale: 'pt-BR'), class:"nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'English', root_path(locale: 'en'), class:"nav-link" %>
+        </li>
+      </ul>
+
+      <%= yield %> <%# index.html.erb, edit.html.erb ...%>
+
+    </div>
   </body>
 </html>

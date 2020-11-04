@@ -1,42 +1,17 @@
-<p> <%= link_to 'Português', root_path(locale: 'pt-BR') %> </p>
-<p> <%= link_to 'English', root_path(locale: 'en') %> </p>
+<div class="jumbotron">
+  <h1 class="display-4"><%= t('welcome') %></h1>
+  <p class="lead">Este é o Crypto Wallet, uma plataforma para você cadastrar e acompanhar suas cryptomoedas.</p>
+  <hr class="my-4">
+  <p>Pra começar selecione umas das opções abaixo.</p>
+  <%= render "menu" %>
+</div>
 
-<h1><%= t('welcome') %></h1>
 <p><%= @meu_nome %></p>
 
-<%= render "menu" %>
 
-<p><strong>Data a partir do i18n: </strong><%= l(Date.today) %></p>
 <p> Você está no ambiente de <strong><%= ambiente %></strong></p>
+<!--
+<p><strong>Data a partir do i18n: </strong><%= l(Date.today) %></p>
 <p> O idioma usada nessa aplicação é:<strong><%= t('actual_locale') %></strong></p>
-<p> Traduzindo:<%= t('hello') %> </p>
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+<p> Traduzindo:<%= t('hello') %> </p> 
+-->
