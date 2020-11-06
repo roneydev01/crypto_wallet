@@ -1,4 +1,4 @@
 
-<%= link_to "Cadsatrar Moedas", coins_path, class:"btn btn-primary btn-lg", role:"button" %>
+<%= link_to "#{Coin.mode_nome.human}", coins_path, class:"btn btn-primary btn-lg", role:"button" %>
 
-<%= link_to "Cadsatrar Tipos de Mineração", mining_types_path, class:"btn btn-primary btn-lg", role:"button" %>
+<%= link_to "#{MiningType.mode_nome.human}", mining_types_path, class:"btn btn-primary btn-lg", role:"button" %>
